@@ -12,7 +12,7 @@ class SinglePost extends Component {
     content: '',
   };
 
-  componentDidMount() {
+  componentWillMount() {
     const postId = this.props.match.params.postId;
     fetch('http://localhost:8080/feed/post/' + postId, {
       headers: {
