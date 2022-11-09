@@ -140,7 +140,7 @@ class App extends Component {
           );
         }
         if (resData.errors) {
-          throw new Error('User Creating failed!');
+          throw new Error('User creation failed!');
         }
         console.log(resData);
         this.setState({ isAuth: false, authLoading: false });
