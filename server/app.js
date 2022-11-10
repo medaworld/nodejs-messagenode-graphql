@@ -68,7 +68,7 @@ app.put('/post-image', (req, res, next) => {
   }
   return res
     .status(201)
-    .json({ message: 'File stored', filePath: req.file.path });
+    .json({ message: 'File stored.', filePath: req.file.path });
 });
 
 app.use(
@@ -82,7 +82,7 @@ app.use(
         return err;
       }
       const data = err.originalError.data;
-      const message = err.message || 'An error occurred';
+      const message = err.message || 'An error occurred.';
       const code = err.originalError.code || 500;
       return { message: message, status: code, data: data };
     },
